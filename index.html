@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎓 Student Management Dashboard</h1>
+
+    <div class="dashboard">
+
+        <div class="card">
+            <h2 id="studentCount">0</h2>
+            <p>Total Students</p>
+        </div>
+
+        <div class="card">
+            <h2 id="classCount">0</h2>
+            <p>Total Classes</p>
+        </div>
+
+        <div class="card">
+            <h2 id="avgAge">0</h2>
+            <p>Average Age</p>
+        </div>
+
+    </div>
+
+    <div class="form-container">
+
+        <input type="text" id="studentId" placeholder="Student ID">
+
+        <input type="text" id="studentName" placeholder="Student Name">
+
+        <input type="text" id="studentClass" placeholder="Class">
+
+        <input type="number" id="studentAge" placeholder="Age">
+
+        <input type="email" id="studentEmail" placeholder="Email">
+
+        <button onclick="addStudent()">
+            Add Student
+        </button>
+
+        <button onclick="exportCSV()" class="export-btn">
+            Export CSV
+        </button>
+
+    </div>
+
+    <div class="search-box">
+
+        <input
+        type="text"
+        id="searchInput"
+        placeholder="Search Student..."
+        onkeyup="searchStudent()">
+
+    </div>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="studentTable"></tbody>
+
+    </table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
